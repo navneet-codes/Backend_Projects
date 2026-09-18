@@ -13,7 +13,7 @@ const CreatePost = () => {
 
     axios
       .post("http://localhost:3000/Create-post", formData)
-      .then((res) => {
+      .then(() => {
         navigate("/Feed");
       })
       .catch((error) => {

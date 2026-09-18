@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 
 const Feed = () => {
@@ -12,7 +12,7 @@ const Feed = () => {
   ]);
 
   useEffect(() => {
-    const data = axios.get("http://localhost:3000/Feed").then((res) => {
+    axios.get("http://localhost:3000/Feed").then((res) => {
       setPosts(res.data.feed);
     });
   }, []);
